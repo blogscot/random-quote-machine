@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  font-size: 28px;
+  padding: 2rem 1rem 1.5rem;
+  background-color: burlywood;
+  border-radius: 3px;
+  max-width: 50vw;
+}
+
+#quote {
+  text-align: center;
+}
+
+#author {
+  align-self: flex-end;
+  font-size: 16px;
+  margin: 2rem 0 1.5rem;
+}
+
+.quote-mark {
+  font-style: italic;
+  font-weight: bolder;
+}
+
+button {
+  padding: 8px 15px;
+  /* margin-bottom: -0.5rem; */
+  font-size: 0.9rem;
+  font-family: 'Helvetica Neue', sans-serif;
+  align-self: flex-end;
+}
