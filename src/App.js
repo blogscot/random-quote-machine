@@ -53,7 +53,7 @@ class App extends React.Component {
     if (!quote) {
       return <div>Loading Quotes ...</div>
     }
-    const title = `${'"' + quote + '" ' + author}`
+    const text = `${'"' + quote + '" ' + author}`
     return (
       <div className="App" id="quote-box">
         <div id="text">
@@ -66,16 +66,17 @@ class App extends React.Component {
           <div id="social-media">
             <TwitterShareButton
               url={'https://favqs.com'}
-              title={title}
+              title={text}
               className="twitter-button"
             >
               <TwitterIcon size={48} round />
             </TwitterShareButton>
             <TumblrShareButton
               url={'https://favqs.com'}
-              title={title}
-              caption={'Favourite Quotes'}
+              title={'Favourite Quotes'}
+              caption={text}
               className="tumblr-button"
+              tags={['quotes']}
             >
               <TumblrIcon size={48} round />
             </TumblrShareButton>
