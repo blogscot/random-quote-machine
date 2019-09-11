@@ -1,4 +1,10 @@
 import React from 'react'
+import {
+  TwitterShareButton,
+  TumblrShareButton,
+  TwitterIcon,
+  TumblrIcon,
+} from 'react-share'
 import './App.css'
 
 class App extends React.Component {
@@ -43,18 +49,38 @@ class App extends React.Component {
     this.quotes = data.quotes
   }
   render() {
-    if (!this.state.quote) {
+    const { author, quote } = this.state
+    if (!quote) {
       return <div>Loading Quotes ...</div>
     }
+    const title = `${'"' + quote + '" ' + author}`
     return (
       <div className="App">
         <div id="quote">
           <span className="quote-mark">"</span>
-          {this.state.quote}
+          {quote}
           <span className="quote-mark">"</span>
         </div>
-        <div id="author">{this.state.author}</div>
-        <button onClick={this.displayQuote}>Get Quote</button>
+        <div id="author">{author}</div>
+        <div id="buttons">
+          <div id="social-media">
+            <TwitterShareButton
+              url={'https://favqs.com'}
+              title={title}
+              className="twitter-button"
+            >
+              <TwitterIcon size={48} round />
+            </TwitterShareButton>
+            <TumblrShareButton
+              url={'https://favqs.com'}
+              title={title}
+              caption={'Favourite Quotes'}
+            >
+              <TumblrIcon size={48} round />
+            </TumblrShareButton>
+          </div>
+          <button onClick={this.displayQuote}>Get Quote</button>
+        </div>
       </div>
     )
   }

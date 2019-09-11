@@ -32,8 +32,17 @@ body {
 
 button {
   padding: 8px 15px;
-  /* margin-bottom: -0.5rem; */
   font-size: 0.9rem;
   font-family: 'Helvetica Neue', sans-serif;
-  align-self: flex-end;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#social-media {
+  display: flex;
+  justify-content: space-around;
+  width: 110px;
 }
