@@ -55,8 +55,8 @@ class App extends React.Component {
     }
     const title = `${'"' + quote + '" ' + author}`
     return (
-      <div className="App">
-        <div id="quote">
+      <div className="App" id="quote-box">
+        <div id="text">
           <span className="quote-mark">"</span>
           {quote}
           <span className="quote-mark">"</span>
@@ -75,11 +75,14 @@ class App extends React.Component {
               url={'https://favqs.com'}
               title={title}
               caption={'Favourite Quotes'}
+              className="tumblr-button"
             >
               <TumblrIcon size={48} round />
             </TumblrShareButton>
           </div>
-          <button onClick={this.displayQuote}>Get Quote</button>
+          <button id="new-quote" onClick={this.displayQuote}>
+            New Quote
+          </button>
         </div>
       </div>
     )
