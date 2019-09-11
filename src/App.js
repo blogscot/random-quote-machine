@@ -16,7 +16,7 @@ class App extends React.Component {
     await this.loadQuotes()
     this.displayQuote()
   }
-  displayQuote() {
+  async displayQuote() {
     const { author, body: quote } = this.quotes[this.index]
     this.setState({
       author,
@@ -25,6 +25,7 @@ class App extends React.Component {
 
     this.index = this.index + 1
     if (this.index >= this.quotes.length) {
+      await this.loadQuotes()
       this.index = 0
     }
   }
@@ -37,7 +38,7 @@ class App extends React.Component {
         'Content-Type': 'application/json',
         Authorization: accessKey,
       },
-    })
+    }).catch(error => console.error('Error loading quotes: ', error))
     data = await data.json()
     this.quotes = data.quotes
   }
