@@ -16,6 +16,12 @@ body {
   box-shadow: 1px 5px 10px grey;
 }
 
+@media screen and (max-width: 520px) {
+  .App {
+    max-width: 80vw;
+  }
+}
+
 #text {
   text-align: center;
   font-family: 'Raleway', sans-serif;
