@@ -19,7 +19,7 @@ body {
 #text {
   text-align: center;
   font-family: 'Raleway', sans-serif;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 #author {
@@ -33,13 +33,18 @@ body {
 .quote-mark {
   font-style: italic;
   font-weight: bolder;
+  font-family: sans-serif;
 }
 
 button {
-  padding: 6px 13px;
+  padding: 0 10px;
   font-size: 1.1rem;
-  border-radius: 3px;
+  box-shadow: 1px 1px 2px #222;
+  border: none;
+  border-radius: 5px;
   font-family: 'Helvetica Neue', sans-serif;
+  background: #cd944b;
+  color: azure;
 }
 
 #buttons {
@@ -56,5 +61,5 @@ button {
 #social-media {
   display: flex;
   justify-content: space-around;
-  width: 110px;
+  width: 80px;
 }

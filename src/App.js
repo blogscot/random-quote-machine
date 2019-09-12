@@ -54,6 +54,7 @@ class App extends React.Component {
       return <div>Loading Quotes ...</div>
     }
     const text = `${'"' + quote + '" ' + author}`
+    const iconSize = 36
     return (
       <div className="App" id="quote-box">
         <div id="text">
@@ -69,7 +70,7 @@ class App extends React.Component {
               title={text}
               className="twitter-button"
             >
-              <TwitterIcon size={48} round />
+              <TwitterIcon size={iconSize} round />
             </TwitterShareButton>
             <TumblrShareButton
               url={'https://favqs.com'}
@@ -78,7 +79,7 @@ class App extends React.Component {
               className="tumblr-button"
               tags={['quotes']}
             >
-              <TumblrIcon size={48} round />
+              <TumblrIcon size={iconSize} round />
             </TumblrShareButton>
           </div>
           <button id="new-quote" onClick={this.displayQuote}>
