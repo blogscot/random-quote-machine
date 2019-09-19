@@ -40,8 +40,8 @@ const SocialMediaButtons = ({ quote, author }) => {
 }
 
 SocialMediaButtons.propTypes = {
-  author: string,
-  quote: string,
+  author: string.isRequired,
+  quote: string.isRequired,
 }
 
 export default SocialMediaButtons
