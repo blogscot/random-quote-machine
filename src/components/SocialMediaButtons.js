@@ -28,7 +28,7 @@ const SocialMediaButtons = ({ quote, author }) => {
         <TumblrIcon size={iconSize} round />
       </TumblrShareButton>
       <a
-        Style="display: none;"
+        style={{ display: 'none' }}
         href="https://twitter.com/intent/tweet"
         id="tweet-quote"
       >
