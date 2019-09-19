@@ -5,6 +5,7 @@ import {
   TwitterIcon,
   TumblrIcon,
 } from 'react-share'
+import { string } from 'prop-types'
 
 const SocialMediaButtons = ({ quote, author }) => {
   const text = `${'"' + quote + '" ' + author}`
@@ -36,6 +37,11 @@ const SocialMediaButtons = ({ quote, author }) => {
       </a>
     </div>
   )
+}
+
+SocialMediaButtons.propTypes = {
+  author: string,
+  quote: string,
 }
 
 export default SocialMediaButtons

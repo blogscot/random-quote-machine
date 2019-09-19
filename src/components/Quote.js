@@ -1,4 +1,5 @@
 import React from 'react'
+import { string } from 'prop-types'
 
 const Quote = ({ author, quote }) => {
   return (
@@ -11,6 +12,11 @@ const Quote = ({ author, quote }) => {
       <div id="author">{author}</div>
     </>
   )
+}
+
+Quote.propTypes = {
+  author: string,
+  quote: string,
 }
 
 export default Quote
