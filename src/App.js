@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import SocialMediaButtons from './components/SocialMediaButtons'
+import Quote from './components/Quote'
 
 class App extends React.Component {
   index = 0
@@ -44,20 +45,14 @@ class App extends React.Component {
     this.quotes = data.quotes
   }
   render() {
-    const { author, quote } = this.state
-    if (!quote) {
+    if (!this.state.quote) {
       return <div>Loading Quotes ...</div>
     }
     return (
       <div className="App" id="quote-box">
-        <div id="text">
-          <span className="quote-mark">"</span>
-          {quote}
-          <span className="quote-mark">"</span>
-        </div>
-        <div id="author">{author}</div>
+        <Quote {...this.state} />
         <div id="buttons">
-          <SocialMediaButtons props={this.state} />
+          <SocialMediaButtons {...this.state} />
           <button id="new-quote" onClick={this.displayQuote}>
             New Quote
           </button>
