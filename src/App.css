@@ -22,26 +22,6 @@ body {
   }
 }
 
-#text {
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-  font-size: 24px;
-}
-
-#author {
-  align-self: flex-end;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: bold;
-  margin: 1.8rem 0 1.7rem;
-}
-
-.quote-mark {
-  font-style: italic;
-  font-weight: bolder;
-  font-family: sans-serif;
-}
-
 button {
   padding: 0 10px;
   font-size: 1.1rem;
@@ -53,19 +33,8 @@ button {
   color: azure;
 }
 
-#buttons {
-  display: flex;
-  justify-content: space-between;
-}
-
 .twitter-button,
 .tumblr-button,
 button {
   cursor: pointer;
-}
-
-#social-media {
-  display: flex;
-  justify-content: space-around;
-  width: 80px;
 }

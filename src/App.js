@@ -2,6 +2,12 @@ import React from 'react'
 import './App.css'
 import SocialMediaButtons from './components/SocialMediaButtons'
 import Quote from './components/Quote'
+import styled from 'styled-components'
+
+const Buttons = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
 
 class App extends React.Component {
   index = 0
@@ -51,12 +57,12 @@ class App extends React.Component {
     return (
       <div className="App" id="quote-box">
         <Quote {...this.state} />
-        <div id="buttons">
+        <Buttons>
           <SocialMediaButtons {...this.state} />
           <button id="new-quote" onClick={this.displayQuote}>
             New Quote
           </button>
-        </div>
+        </Buttons>
       </div>
     )
   }

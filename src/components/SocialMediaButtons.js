@@ -6,12 +6,19 @@ import {
   TumblrIcon,
 } from 'react-share'
 import { string } from 'prop-types'
+import styled from 'styled-components'
+
+const SocialMedia = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+`
 
 const SocialMediaButtons = ({ quote, author }) => {
   const text = `${'"' + quote + '" ' + author}`
-  const iconSize = 36
+  const iconSize = 40
   return (
-    <div id="social-media">
+    <SocialMedia>
       <TwitterShareButton
         url={'https://favqs.com'}
         title={text}
@@ -35,7 +42,7 @@ const SocialMediaButtons = ({ quote, author }) => {
       >
         Only needed to pass the tests
       </a>
-    </div>
+    </SocialMedia>
   )
 }
 
