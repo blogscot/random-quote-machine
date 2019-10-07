@@ -25,12 +25,12 @@ body {
 button {
   padding: 0 10px;
   font-size: 1.1rem;
-  box-shadow: 1px 1px 2px #222;
+  box-shadow: 1px 1px 2px #888;
   border: none;
   border-radius: 5px;
   font-family: 'Helvetica Neue', sans-serif;
-  background: #cd944b;
-  color: azure;
+  background: hsl(34, 57%, 67%);
+  color: #333;
 }
 
 .twitter-button,
